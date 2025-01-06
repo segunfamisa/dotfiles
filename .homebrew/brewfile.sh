@@ -6,6 +6,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 # apps casks
+cask "ghostty"
 cask "iterm2"
 cask "slack"
 cask "notion"
