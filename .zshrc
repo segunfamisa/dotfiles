@@ -10,4 +10,4 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Environment configuration
-source ~/.env.sh
+source ~/.config.sh
