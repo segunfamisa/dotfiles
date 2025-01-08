@@ -14,7 +14,3 @@ fi;
 dotfiles checkout
 dotfiles config status.showUntrackedFiles no
 echo "Checked out repo successfully"
-
-# source the .zshrc
-source $HOME/.zshrc
-echo "Dotfiles alias can now be used."
