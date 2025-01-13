@@ -6,6 +6,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 # apps casks
+cask "1password"
 cask "firefox"
 cask "ghostty"
 cask "iterm2"
