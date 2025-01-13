@@ -24,6 +24,8 @@ cask "temurin@21"
 
 # brews
 brew "git"
+brew "gradle"
+brew "gradle-profiler"
 brew "jenv"
 brew "pyenv"
 brew "python@3.10"
