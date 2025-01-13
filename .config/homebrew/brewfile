@@ -2,17 +2,21 @@ cask_args appdir: "/Applications"
 
 # install packages + some apps
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 
 # apps casks
 cask "1password"
+cask "affinity-photo"
+cask "digikam"
 cask "firefox"
+cask "google-drive"
 cask "ghostty"
 cask "iterm2"
 cask "slack"
+cask "tailscale"
+cask "telegram"
 cask "notion"
 cask "visual-studio-code"
+cask "zoom"
 
 # jdk casks
 cask "temurin@17"
