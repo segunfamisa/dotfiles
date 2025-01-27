@@ -16,6 +16,7 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 PERFETTO_HOME=$HOME/.perfetto
 PERFETTO_RECORD_TRACE=$PERFETTO_HOME/record_android_trace
 PERFETTO_HEAP_PROFILE=$PERFETTO_HOME/heap_profile
+PERFETTO_HEAP_DUMP=$PERFETTO_HOME/java_heap_dump
 # download record trace
 if [ ! -f $PERFETTO_RECORD_TRACE ]; then
   mkdir -p $PERFETTO_HOME
@@ -27,6 +28,12 @@ if [ ! -f $PERFETTO_HEAP_PROFILE ]; then
   mkdir -p $PERFETTO_HOME
   curl -Lo $PERFETTO_HEAP_PROFILE https://raw.githubusercontent.com/google/perfetto/main/tools/heap_profile
   chmod +x $PERFETTO_HEAP_PROFILE
+fi
+# download java heap dump
+if [ ! -f $PERFETTO_HEAP_DUMP ]; then
+  mkdir -p $PERFETTO_HOME
+  curl -Lo $PERFETTO_HEAP_DUMP https://raw.githubusercontent.com/google/perfetto/refs/heads/main/tools/java_heap_dump
+  chmod +x $PERFETTO_HEAP_DUMP
 fi
 export PATH="$PERFETTO_HOME:$PATH"
 
