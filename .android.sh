@@ -61,10 +61,10 @@ function adbi() {
     getSerialNumber && adb -s "$serial_number" "$@"
 }
 
-function talkback_on() {
+function adb_talkback_on() {
   adbi shell settings put secure enabled_accessibility_services com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService
 }
 
-function talkback_off() {
+function adb_talkback_off() {
   adbi shell settings put secure enabled_accessibility_services com.android.talkback/com.google.android.marvin.talkback.TalkBackService
 }
