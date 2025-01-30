@@ -1,6 +1,12 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# GitHub tokens stored in a .gh file
+GH_SECRETS=$HOME/.gh
+if [ -f $GH_SECRETS ]; then
+  source $HOME/.gh
+fi
+
 # dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 

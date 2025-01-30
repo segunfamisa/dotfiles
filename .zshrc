@@ -11,3 +11,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment configuration
 source ~/.config.sh
+source ~/.aliases.sh
