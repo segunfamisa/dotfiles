@@ -2,9 +2,9 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # GitHub tokens stored in a .gh file
-GH_SECRETS=$HOME/.gh
+GH_SECRETS=$HOME/.ghsecrets
 if [ -f $GH_SECRETS ]; then
-  source $HOME/.gh
+  source $GH_SECRETS
 fi
 
 # dotfiles
