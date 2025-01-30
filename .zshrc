@@ -11,4 +11,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment configuration
 source ~/.config.sh
+source ~/.android.sh
 source ~/.aliases.sh
