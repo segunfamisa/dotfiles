@@ -1,4 +1,10 @@
 #!/bin/zsh
+ANDROID_NDK_HOME=~/Library/Android/ndk
+if [ -e $ANDROID_NDK_HOME ]; then
+  # add simple perf to path
+  export PATH="$ANDROID_NDK_HOME/simpleperf:$PATH"
+fi
+
 # H/T to Zarah Dominguez -> https://gist.github.com/zmdominguez/9a889f1c367e1a21203ce8527c81e612
 function get_devices() {
   # Get the type to find (defaults to "a")
