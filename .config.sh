@@ -10,6 +10,11 @@ fi
 # dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# local bin - goose install
+if [ -f $HOME/.local/bin ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # jenv/java set up
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
@@ -47,3 +52,7 @@ export PATH="$PERFETTO_HOME:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# rbevn set up
+eval "$(rbenv init -)"
+
