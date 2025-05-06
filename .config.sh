@@ -1,6 +1,8 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export PATH="$PATH:/Users/sf/.cargo/bin"
+
 # GitHub tokens stored in a .gh file
 GH_SECRETS=$HOME/.ghsecrets
 if [ -f $GH_SECRETS ]; then
