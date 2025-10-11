@@ -1,9 +1,39 @@
 #!/bin/zsh
+# Android config
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
 ANDROID_NDK_HOME=~/Library/Android/ndk
 if [ -e $ANDROID_NDK_HOME ]; then
   # add simple perf to path
   export PATH="$ANDROID_NDK_HOME/simpleperf:$PATH"
 fi
+
+# Perfetto set up
+PERFETTO_HOME=$HOME/.perfetto
+PERFETTO_RECORD_TRACE=$PERFETTO_HOME/record_android_trace
+PERFETTO_HEAP_PROFILE=$PERFETTO_HOME/heap_profile
+PERFETTO_HEAP_DUMP=$PERFETTO_HOME/java_heap_dump
+# download record trace
+if [ ! -f $PERFETTO_RECORD_TRACE ]; then
+  mkdir -p $PERFETTO_HOME
+  curl -Lo $PERFETTO_RECORD_TRACE https://raw.githubusercontent.com/google/perfetto/main/tools/record_android_trace
+  chmod +x $PERFETTO_RECORD_TRACE
+fi
+# download heap profile
+if [ ! -f $PERFETTO_HEAP_PROFILE ]; then
+  mkdir -p $PERFETTO_HOME
+  curl -Lo $PERFETTO_HEAP_PROFILE https://raw.githubusercontent.com/google/perfetto/main/tools/heap_profile
+  chmod +x $PERFETTO_HEAP_PROFILE
+fi
+# download java heap dump
+if [ ! -f $PERFETTO_HEAP_DUMP ]; then
+  mkdir -p $PERFETTO_HOME
+  curl -Lo $PERFETTO_HEAP_DUMP https://raw.githubusercontent.com/google/perfetto/refs/heads/main/tools/java_heap_dump
+  chmod +x $PERFETTO_HEAP_DUMP
+fi
+export PATH="$PERFETTO_HOME:$PATH"
 
 # H/T to Zarah Dominguez -> https://gist.github.com/zmdominguez/9a889f1c367e1a21203ce8527c81e612
 function get_devices() {
