@@ -20,7 +20,7 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # pipx executables
-if [ -f $HOME/.local/bin ]; then
+if [ -e $HOME/.local/bin ]; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
 
