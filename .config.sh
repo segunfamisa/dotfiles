@@ -33,3 +33,6 @@ export PATH="$PATH:$HOME/.cargo/env"
 
 # LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
+
+# ZSH extensions
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
