@@ -1,0 +1,40 @@
+cask_args appdir: "/Applications"
+
+# install packages + some apps
+tap "homebrew/bundle"
+
+# apps casks
+cask "1password"
+cask "affinity-photo"
+cask "digikam"
+cask "firefox"
+cask "google-drive"
+cask "ghostty"
+cask "iterm2"
+cask "slack"
+cask "tailscale"
+cask "telegram"
+cask "notion"
+cask "visual-studio-code"
+cask "zoom"
+
+# jdk casks
+cask "temurin@17"
+cask "temurin@21"
+
+# brews
+brew "git"
+brew "gradle"
+brew "gradle-profiler"
+brew "jenv"
+brew "pyenv"
+brew "python@3.10"
+brew "rbenv"
+brew "rust"
+brew "scrcpy"
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-autosuggestions"
+brew "fd"
+brew "bat"
+brew "television"
