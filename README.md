@@ -2,12 +2,25 @@
 
 Personal macOS dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
-## Install
+## Prerequisites
 
-Install chezmoi, then initialize and apply this repo:
+This setup assumes macOS.
+
+Recommended first-time prerequisites:
 
 ```sh
+xcode-select --install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install chezmoi
+```
+
+Some casks may still ask for an admin password or macOS permissions during install or first launch.
+
+## Install
+
+Initialize and apply this repo:
+
+```sh
 chezmoi init --apply https://github.com/segunfamisa/dotfiles.git
 ```
 
