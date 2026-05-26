@@ -1,27 +1,17 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
 # Path to your Oh My Zsh installation.
 # See https://github.com/ohmyzsh/ohmyzsh/
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
-source $ZSH/oh-my-zsh.sh
 
-# Environment configuration
-source ~/.config.sh
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/sf/.lmstudio/bin"
-# End of LM Studio CLI section
-
-
-# fnm
-FNM_PATH="/opt/homebrew/opt/fnm/bin"
-if [ -d "$FNM_PATH" ]; then
-  eval "`fnm env`"
+if [ -f "$ZSH/oh-my-zsh.sh" ]; then
+  . "$ZSH/oh-my-zsh.sh"
 fi
 
-# Added by Antigravity
-export PATH="/Users/sf/.antigravity/antigravity/bin:$PATH"
+# Environment configuration
+DOTFILES_CONFIG_DIR="$HOME/.config/dotfiles"
+if [ -f "$DOTFILES_CONFIG_DIR/env.sh" ]; then
+  . "$DOTFILES_CONFIG_DIR/env.sh"
+fi
+unset DOTFILES_CONFIG_DIR
