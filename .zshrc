@@ -11,7 +11,7 @@ fi
 
 # Environment configuration
 DOTFILES_CONFIG_DIR="$HOME/.config/dotfiles"
-if [ -f "$DOTFILES_CONFIG_DIR/env.sh" ]; then
-  . "$DOTFILES_CONFIG_DIR/env.sh"
+if [ -f "$DOTFILES_CONFIG_DIR/init.sh" ]; then
+  . "$DOTFILES_CONFIG_DIR/init.sh"
 fi
 unset DOTFILES_CONFIG_DIR
