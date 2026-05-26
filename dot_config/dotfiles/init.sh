@@ -3,20 +3,20 @@
 
 _dotfiles_config_dir="${DOTFILES_CONFIG_DIR:-$HOME/.config/dotfiles}"
 
-source_if_exists() {
-  file="$1"
-  if [ -f "$file" ]; then
-    . "$file"
+__dotfiles_source_if_exists() {
+  __dotfiles_file="$1"
+  if [ -f "$__dotfiles_file" ]; then
+    . "$__dotfiles_file"
   fi
 }
 
-source_if_exists "$_dotfiles_config_dir/homebrew.sh"
-source_if_exists "$_dotfiles_config_dir/secrets.sh"
-source_if_exists "$_dotfiles_config_dir/toolchains.sh"
-source_if_exists "$_dotfiles_config_dir/firefox.sh"
-source_if_exists "$_dotfiles_config_dir/tools.sh"
-source_if_exists "$_dotfiles_config_dir/aliases.sh"
-source_if_exists "$_dotfiles_config_dir/local.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/homebrew.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/secrets.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/toolchains.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/firefox.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/tools.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/aliases.sh"
+__dotfiles_source_if_exists "$_dotfiles_config_dir/local.sh"
 
-unset _dotfiles_config_dir file
-unset -f source_if_exists 2>/dev/null || unfunction source_if_exists 2>/dev/null
+unset _dotfiles_config_dir __dotfiles_file
+unset -f __dotfiles_source_if_exists 2>/dev/null || unfunction __dotfiles_source_if_exists 2>/dev/null
