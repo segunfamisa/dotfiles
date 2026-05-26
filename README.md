@@ -82,6 +82,12 @@ Toolchain-specific setup lives in:
 .config/dotfiles/toolchains/rust.sh
 ```
 
+Toolchain installers live alongside the toolchain config:
+
+```text
+.config/dotfiles/toolchains/android-install.sh
+```
+
 App/package config:
 
 ```text
