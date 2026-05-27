@@ -23,10 +23,12 @@ fgit() {
       git --git-dir="$HUB_DIR" worktree add "$WT_DIR/full" "$MAIN_BR" --detach
 
       echo "ac_add_options --enable-project=mobile/android" > "$WT_DIR/artifact/mozconfig"
-      echo "ac_add_options --enable-artifact-builds\nmk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-artifact" > "$WT_DIR/artifact/mozconfig"
+      echo "ac_add_options --enable-artifact-builds\nmk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-artifact" >> "$WT_DIR/artifact/mozconfig"
+      echo "mk_add_options AUTOCLOBBER=1" >> "$WT_DIR/full/mozconfig"
 
       echo "ac_add_options --enable-project=mobile/android" > "$WT_DIR/full/mozconfig"
-      echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-full" > "$WT_DIR/full/mozconfig"
+      echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-full" >> "$WT_DIR/full/mozconfig"
+      echo "mk_add_options AUTOCLOBBER=1" >> "$WT_DIR/full/mozconfig"
       ;;
 
     new)
