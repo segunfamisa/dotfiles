@@ -24,6 +24,7 @@ cask "temurin@17"
 cask "temurin@21"
 
 # brews
+brew "fzf"
 brew "git"
 brew "gradle"
 brew "gradle-profiler"

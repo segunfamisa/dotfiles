@@ -1,5 +1,10 @@
 # General developer/tooling setup
 
+# fzf key bindings and fuzzy completion
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
+
 # Local binaries
 if [ -d "$HOME/.local/bin" ]; then
   export PATH="$HOME/.local/bin:$PATH"
