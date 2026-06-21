@@ -1,12 +1,33 @@
 # Jujutsu user config shared by chezmoi.
 # Applied to: ~/.config/jj/config.toml
 
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
 [ui]
 # IntelliJ-based IDEs understand Git/diff3-style conflict markers best.
 conflict-marker-style = "git"
 # Default tool for `jj resolve`.
 # Requires Android Studio's command-line launcher to be available as `studio`.
 merge-editor = "android-studio"
+
+[snapshot]
+# Refresh stale working-copy state automatically when files were changed by tools/IDEs.
+auto-update-stale = true
+
+[git]
+# Never push commits explicitly marked as WIP/private in their description.
+private-commits = "blacklist()"
+
+[revset-aliases]
+"wip()" = 'description(glob:"wip:*")'
+"private()" = 'description(glob:"private:*")'
+"blacklist()" = "wip() | private()"
+
+[colors]
+# Use background highlighting for changed words instead of underlines.
+"diff token" = { underline = false }
+"diff removed token" = { fg = "bright red", bg = "#400000", underline = false }
+"diff added token" = { fg = "bright green", bg = "#003000", underline = false }
 
 [merge-tools.android-studio]
 program = "studio"
