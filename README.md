@@ -84,6 +84,7 @@ Examples:
 dot_zshrc                         -> ~/.zshrc
 dot_config/dotfiles/init.sh       -> ~/.config/dotfiles/init.sh
 dot_config/homebrew/brewfile      -> ~/.config/homebrew/brewfile
+dot_config/jj/config.toml         -> ~/.config/jj/config.toml
 ```
 
 Main shell entrypoint:
@@ -129,6 +130,7 @@ App/package config:
 ```text
 dot_config/homebrew/brewfile
 dot_config/ghostty/config
+dot_config/jj/config.toml
 dot_config/television/cable/files.toml
 ```
 

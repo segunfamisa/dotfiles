@@ -1,0 +1,29 @@
+# Jujutsu user config shared by chezmoi.
+# Applied to: ~/.config/jj/config.toml
+
+[ui]
+# IntelliJ-based IDEs understand Git/diff3-style conflict markers best.
+conflict-marker-style = "git"
+# Default tool for `jj resolve`.
+# Requires Android Studio's command-line launcher to be available as `studio`.
+merge-editor = "android-studio"
+
+[merge-tools.android-studio]
+program = "studio"
+merge-args = ["--wait", "merge", "$left", "$right", "$base", "$output"]
+diff-args = ["--wait", "diff", "$left", "$right"]
+
+[merge-tools.android-studio-canary]
+program = "studio-canary"
+merge-args = ["--wait", "merge", "$left", "$right", "$base", "$output"]
+diff-args = ["--wait", "diff", "$left", "$right"]
+
+[merge-tools.idea]
+program = "idea"
+merge-args = ["--wait", "merge", "$left", "$right", "$base", "$output"]
+diff-args = ["--wait", "diff", "$left", "$right"]
+
+[merge-tools.intellij]
+program = "idea"
+merge-args = ["--wait", "merge", "$left", "$right", "$base", "$output"]
+diff-args = ["--wait", "diff", "$left", "$right"]
