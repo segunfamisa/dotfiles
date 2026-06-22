@@ -1,0 +1,21 @@
+# jjui user config shared by chezmoi.
+# Applied to: ~/.config/jjui/config.toml
+
+[preview]
+# Let jjui pick right/bottom based on terminal dimensions.
+position = "auto"
+show_at_start = false
+width_percentage = 50.0
+width_increment_percentage = 5.0
+
+[oplog]
+limit = 200
+
+[suggest.exec]
+# Fuzzy suggestions in jjui's `:` and `$` command prompts.
+mode = "fuzzy"
+
+[ui]
+set_window_title = true
+mouse_support = true
+flash_message_display_seconds = 4

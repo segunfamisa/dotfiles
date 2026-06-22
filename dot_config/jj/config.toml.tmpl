@@ -3,6 +3,14 @@
 
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
+{{- $email := index . "email" -}}
+{{- if not $email -}}
+{{ fail "chezmoi data.email must be set" }}
+{{- end }}
+[user]
+name = "Segun Famisa"
+email = {{ $email | quote }}
+
 [ui]
 # IntelliJ-based IDEs understand Git/diff3-style conflict markers best.
 conflict-marker-style = "git"
@@ -28,6 +36,14 @@ private-commits = "blacklist()"
 "diff token" = { underline = false }
 "diff removed token" = { fg = "bright red", bg = "#400000", underline = false }
 "diff added token" = { fg = "bright green", bg = "#003000", underline = false }
+
+# jjui sets the JJUI environment variable before invoking jj.
+# Keep jj output unpaged inside jjui so the TUI can render command output itself.
+[[--scope]]
+--when.environments = ["JJUI"]
+
+[--scope.ui]
+paginate = "never"
 
 [merge-tools.android-studio]
 program = "studio"

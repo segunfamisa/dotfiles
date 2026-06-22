@@ -18,13 +18,24 @@ Some casks may still ask for an admin password or macOS permissions during insta
 
 ## Install
 
-Initialize and apply this repo:
+Initialize this repo, set local machine data, then apply:
 
 ```sh
-chezmoi init --apply https://github.com/segunfamisa/dotfiles.git
+chezmoi init https://github.com/segunfamisa/dotfiles.git
+chezmoi edit-config
+chezmoi apply
 ```
 
-During `chezmoi init --apply`, chezmoi also runs the managed Android tooling install script. Homebrew package installation is optional and can be run manually.
+The local chezmoi config must include an email address used by templated config such as Jujutsu:
+
+```toml
+[data]
+email = "you@example.com"
+```
+
+For example, personal and work machines can use different local values without committing them to this repo.
+
+During `chezmoi apply`, chezmoi also runs the managed Android tooling install script. Homebrew package installation is optional and can be run manually.
 
 After the first install, update with:
 
@@ -84,7 +95,8 @@ Examples:
 dot_zshrc                         -> ~/.zshrc
 dot_config/dotfiles/init.sh       -> ~/.config/dotfiles/init.sh
 dot_config/homebrew/brewfile      -> ~/.config/homebrew/brewfile
-dot_config/jj/config.toml         -> ~/.config/jj/config.toml
+dot_config/jj/config.toml.tmpl    -> ~/.config/jj/config.toml
+dot_config/jjui/config.toml       -> ~/.config/jjui/config.toml
 ```
 
 Main shell entrypoint:
@@ -130,7 +142,8 @@ App/package config:
 ```text
 dot_config/homebrew/brewfile
 dot_config/ghostty/config
-dot_config/jj/config.toml
+dot_config/jj/config.toml.tmpl
+dot_config/jjui/config.toml
 dot_config/television/cable/files.toml
 ```
 
@@ -156,7 +169,22 @@ brew bundle --file ~/.config/homebrew/brewfile
 
 ## Local and private config
 
-Secrets are intentionally kept outside this repository. The config sources these optional files when present:
+Secrets and machine-specific values are intentionally kept outside this repository.
+
+Required local chezmoi data:
+
+```toml
+[data]
+email = "you@example.com"
+```
+
+Set it with:
+
+```sh
+chezmoi edit-config
+```
+
+The shell config also sources these optional files when present:
 
 ```text
 ~/.secrets.sh
