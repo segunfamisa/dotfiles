@@ -16,9 +16,9 @@ limit = 200
 mode = "fuzzy"
 
 [ui]
-# Rosé Pine theme, auto-switched to match Ghostty's light/dark detection.
-# Files live in ~/.config/jjui/themes/{rose-pine,rose-pine-dawn}.toml
-theme = { dark = "rose-pine", light = "rose-pine-dawn" }
+# TokyoNight theme, auto-switched to match Ghostty's light/dark detection.
+# Files live in ~/.config/jjui/themes/{tokyonight-night,tokyonight-day}.toml
+theme = { dark = "tokyonight-night", light = "tokyonight-day" }
 # Auto-refresh the view every N seconds (0 disables).
 auto_refresh_interval = 3
 set_window_title = true

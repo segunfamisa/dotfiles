@@ -1,4 +1,4 @@
-theme = dark:Rose Pine,light:Rose Pine Dawn
+theme = dark:TokyoNight Night,light:TokyoNight Day
 background-opacity = 0.90
 copy-on-select = true
 macos-option-as-alt = true

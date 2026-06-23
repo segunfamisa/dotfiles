@@ -1,0 +1,67 @@
+# TokyoNight Night (dark) theme for jjui — matches Ghostty "TokyoNight Night".
+# Palette:
+#   bg #1a1b26  bg_dark #15161e  bg_highlight #292e42  sel #283457
+#   fg #c0caf5  fg_dark #a9b1d6  comment #565f89   terminal_black #414868
+#   red #f7768e green #9ece6a   yellow #e0af68     blue #7aa2f7
+#   magenta #bb9af7 cyan #7dcfff teal #1abc9c
+
+# --- Base / shared ---
+text = "#c0caf5"
+dimmed = "#565f89"
+title = { fg = "#bb9af7", bold = true }
+shortcut = "#bb9af7"
+matched = "#7dcfff"
+selected = { bg = "#283457" }
+target_marker = { fg = "#1a1b26", bg = "#f7768e", bold = true }
+source_marker = { fg = "#1a1b26", bg = "#7dcfff" }
+success = "#9ece6a"
+error = "#f7768e"
+border = "#414868"
+
+# --- Flash / confirmation ---
+"flash selected" = "#7dcfff"
+"confirmation text" = { fg = "#bb9af7", bold = true }
+"confirmation selected" = { fg = "#c0caf5", bg = "#7aa2f7", bold = true }
+"confirmation dimmed" = "#a9b1d6"
+
+# --- Help ---
+"help title" = { fg = "#9ece6a", bold = true }
+
+# --- Revisions ---
+"revisions details selected" = { bg = "#283457", bold = true }
+"revisions details selected dimmed" = { fg = "#7dcfff" }
+"revisions details dimmed" = "#565f89"
+"revisions matched" = { underline = false, reverse = true }
+
+# --- Op log ---
+"oplog matched" = { underline = false, reverse = true }
+
+# --- Revset prompt + completion ---
+"revset title" = "#bb9af7"
+"revset text" = { fg = "#9ece6a", bold = true }
+"revset completion" = { bg = "#15161e" }
+"revset completion dimmed" = { fg = "#565f89" }
+"revset completion text" = { fg = "#9ece6a" }
+"revset completion matched" = { fg = "#9ece6a", underline = true, bold = true }
+"revset completion selected" = { bg = "#283457", bold = true }
+"revset completion selected dimmed" = { fg = "#7dcfff" }
+"revset completion selected text" = { fg = "#bb9af7" }
+"revset completion selected matched" = { underline = true, bold = true }
+
+# --- Status bar ---
+"status title" = { fg = "#1a1b26", bg = "#bb9af7", bold = true }
+
+# --- Menu ---
+"menu title" = { fg = "#1a1b26", bg = "#bb9af7", bold = true }
+"menu subtitle" = { fg = "#bb9af7", bold = true }
+"menu matched" = { fg = "#bb9af7", bold = true }
+"menu selected" = { fg = "#7dcfff", bold = true, underline = false }
+"menu selected shortcut" = { bg = "default" }
+
+# --- Picker ---
+"picker dimmed" = { fg = "#565f89" }
+"picker matched" = { underline = true }
+"picker selected" = { fg = "#7dcfff", bg = "#283457", bold = true, underline = false }
+"picker selected dimmed" = {}
+"picker selected text" = {}
+"picker selected matched" = {}
