@@ -29,3 +29,11 @@ fi
 if [ -d "$HOME/.antigravity/antigravity/bin" ]; then
   export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 fi
+
+# Google Cloud SDK (PATH + zsh completion)
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
+  . "$HOME/google-cloud-sdk/path.zsh.inc"
+fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then
+  . "$HOME/google-cloud-sdk/completion.zsh.inc"
+fi
