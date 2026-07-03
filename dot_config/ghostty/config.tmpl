@@ -1,0 +1,10 @@
+{{- $theme := index . "theme" | default "tokyonight" -}}
+{{ if eq $theme "catppuccin" -}}
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+{{ else -}}
+theme = dark:TokyoNight Night,light:TokyoNight Day
+{{ end -}}
+background-opacity = 0.90
+copy-on-select = true
+macos-option-as-alt = true
+font-family = "IBM Plex Mono"

@@ -1,0 +1,21 @@
+// Catppuccin Mocha (dark) theme for Zellij — matches Ghostty "catppuccin-mocha"
+// and the jjui catppuccin-mocha theme.
+// Palette:
+//   base #1e1e2e  text #cdd6f4  surface1 #45475a
+//   red #f38ba8 green #a6e3a1 yellow #f9e2af blue #89b4fa
+//   mauve #cba6f7 teal #94e2d5 peach #fab387
+themes {
+    catppuccin-mocha {
+        fg "#cdd6f4"
+        bg "#1e1e2e"
+        black "#45475a"
+        red "#f38ba8"
+        green "#a6e3a1"
+        yellow "#f9e2af"
+        blue "#89b4fa"
+        magenta "#cba6f7"
+        cyan "#94e2d5"
+        white "#cdd6f4"
+        orange "#fab387"
+    }
+}

@@ -16,9 +16,15 @@ limit = 200
 mode = "fuzzy"
 
 [ui]
-# TokyoNight theme, auto-switched to match Ghostty's light/dark detection.
-# Files live in ~/.config/jjui/themes/{tokyonight-night,tokyonight-day}.toml
+# Theme auto-switched to match Ghostty's light/dark detection.
+# Selected by chezmoi data.theme (default "tokyonight"; "catppuccin" also available).
+# Theme files live in ~/.config/jjui/themes/*.toml
+{{- $theme := index . "theme" | default "tokyonight" }}
+{{- if eq $theme "catppuccin" }}
+theme = { dark = "catppuccin-mocha", light = "catppuccin-latte" }
+{{- else }}
 theme = { dark = "tokyonight-night", light = "tokyonight-day" }
+{{- end }}
 # Auto-refresh the view every N seconds (0 disables).
 auto_refresh_interval = 3
 set_window_title = true

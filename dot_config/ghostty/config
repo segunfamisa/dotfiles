@@ -1,5 +1,0 @@
-theme = dark:TokyoNight Night,light:TokyoNight Day
-background-opacity = 0.90
-copy-on-select = true
-macos-option-as-alt = true
-font-family = "IBM Plex Mono"

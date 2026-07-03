@@ -1,0 +1,67 @@
+# Catppuccin Mocha (dark) theme for jjui — matches Ghostty "catppuccin-mocha".
+# Palette:
+#   base #1e1e2e  mantle #181825  surface1 #45475a  surface2 #585b70
+#   text #cdd6f4  subtext0 #a6adc8  overlay0 #6c7086
+#   red #f38ba8 green #a6e3a1 yellow #f9e2af  blue #89b4fa
+#   mauve #cba6f7 teal #94e2d5 peach #fab387
+
+# --- Base / shared ---
+text = "#cdd6f4"
+dimmed = "#6c7086"
+title = { fg = "#cba6f7", bold = true }
+shortcut = "#cba6f7"
+matched = "#94e2d5"
+selected = { bg = "#45475a" }
+target_marker = { fg = "#1e1e2e", bg = "#f38ba8", bold = true }
+source_marker = { fg = "#1e1e2e", bg = "#94e2d5" }
+success = "#a6e3a1"
+error = "#f38ba8"
+border = "#585b70"
+
+# --- Flash / confirmation ---
+"flash selected" = "#94e2d5"
+"confirmation text" = { fg = "#cba6f7", bold = true }
+"confirmation selected" = { fg = "#cdd6f4", bg = "#89b4fa", bold = true }
+"confirmation dimmed" = "#a6adc8"
+
+# --- Help ---
+"help title" = { fg = "#a6e3a1", bold = true }
+
+# --- Revisions ---
+"revisions details selected" = { bg = "#45475a", bold = true }
+"revisions details selected dimmed" = { fg = "#94e2d5" }
+"revisions details dimmed" = "#6c7086"
+"revisions matched" = { underline = false, reverse = true }
+
+# --- Op log ---
+"oplog matched" = { underline = false, reverse = true }
+
+# --- Revset prompt + completion ---
+"revset title" = "#cba6f7"
+"revset text" = { fg = "#a6e3a1", bold = true }
+"revset completion" = { bg = "#181825" }
+"revset completion dimmed" = { fg = "#6c7086" }
+"revset completion text" = { fg = "#a6e3a1" }
+"revset completion matched" = { fg = "#a6e3a1", underline = true, bold = true }
+"revset completion selected" = { bg = "#45475a", bold = true }
+"revset completion selected dimmed" = { fg = "#94e2d5" }
+"revset completion selected text" = { fg = "#cba6f7" }
+"revset completion selected matched" = { underline = true, bold = true }
+
+# --- Status bar ---
+"status title" = { fg = "#1e1e2e", bg = "#cba6f7", bold = true }
+
+# --- Menu ---
+"menu title" = { fg = "#1e1e2e", bg = "#cba6f7", bold = true }
+"menu subtitle" = { fg = "#cba6f7", bold = true }
+"menu matched" = { fg = "#cba6f7", bold = true }
+"menu selected" = { fg = "#94e2d5", bold = true, underline = false }
+"menu selected shortcut" = { bg = "default" }
+
+# --- Picker ---
+"picker dimmed" = { fg = "#6c7086" }
+"picker matched" = { underline = true }
+"picker selected" = { fg = "#94e2d5", bg = "#45475a", bold = true, underline = false }
+"picker selected dimmed" = {}
+"picker selected text" = {}
+"picker selected matched" = {}

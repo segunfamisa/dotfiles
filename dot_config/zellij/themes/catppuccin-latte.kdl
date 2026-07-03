@@ -1,0 +1,21 @@
+// Catppuccin Latte (light) theme for Zellij — matches Ghostty "catppuccin-latte"
+// and the jjui catppuccin-latte theme.
+// Palette:
+//   base #eff1f5  text #4c4f69  surface1 #bcc0cc
+//   red #d20f39 green #40a02b yellow #df8e1d blue #1e66f5
+//   mauve #8839ef teal #179299 peach #fe640b
+themes {
+    catppuccin-latte {
+        fg "#4c4f69"
+        bg "#eff1f5"
+        black "#bcc0cc"
+        red "#d20f39"
+        green "#40a02b"
+        yellow "#df8e1d"
+        blue "#1e66f5"
+        magenta "#8839ef"
+        cyan "#179299"
+        white "#4c4f69"
+        orange "#fe640b"
+    }
+}

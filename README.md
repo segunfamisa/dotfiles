@@ -96,7 +96,9 @@ dot_zshrc                         -> ~/.zshrc
 dot_config/dotfiles/init.sh       -> ~/.config/dotfiles/init.sh
 dot_config/homebrew/brewfile      -> ~/.config/homebrew/brewfile
 dot_config/jj/config.toml.tmpl    -> ~/.config/jj/config.toml
-dot_config/jjui/config.toml       -> ~/.config/jjui/config.toml
+dot_config/jjui/config.toml.tmpl  -> ~/.config/jjui/config.toml
+dot_config/ghostty/config.tmpl    -> ~/.config/ghostty/config
+dot_config/zellij/config.kdl.tmpl -> ~/.config/zellij/config.kdl
 ```
 
 Main shell entrypoint:
@@ -141,12 +143,20 @@ App/package config:
 
 ```text
 dot_config/homebrew/brewfile
-dot_config/ghostty/config
+dot_config/ghostty/config.tmpl
 dot_config/jj/config.toml.tmpl
-dot_config/jjui/config.toml
-dot_config/zellij/config.kdl
+dot_config/jjui/config.toml.tmpl
+dot_config/jjui/themes/
+dot_config/zellij/config.kdl.tmpl
+dot_config/zellij/themes/
 dot_config/television/cable/files.toml
 ```
+
+The Ghostty, jjui and Zellij configs are chezmoi templates that pick their
+colour theme from `data.theme` (`tokyonight` by default, or `catppuccin`).
+Each app still auto-switches between its light and dark variant based on the
+terminal's reported colour scheme. See "Local and private config" for how to
+set the theme.
 
 ## Homebrew
 
@@ -179,7 +189,17 @@ Required local chezmoi data:
 email = "you@example.com"
 ```
 
-Set it with:
+Optional local chezmoi data:
+
+```toml
+[data]
+# Colour theme shared by Ghostty, jjui and Zellij.
+# Each app auto-switches its light/dark variant to match the terminal.
+# Supported values: "tokyonight" (default), "catppuccin".
+theme = "catppuccin"
+```
+
+Set these with:
 
 ```sh
 chezmoi edit-config
