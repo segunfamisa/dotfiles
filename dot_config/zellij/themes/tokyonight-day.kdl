@@ -1,0 +1,21 @@
+// TokyoNight Day (light) theme for Zellij — matches Ghostty "TokyoNight Day"
+// and the jjui tokyonight-day theme.
+// Palette:
+//   bg #e1e2e7  fg #3760bf  terminal_black #a1a6c5
+//   red #f52a65 green #587539 yellow #8c6c3e blue #2e7de9
+//   magenta #9854f1 cyan #007197 orange #b15c00
+themes {
+    tokyonight-day {
+        fg "#3760bf"
+        bg "#e1e2e7"
+        black "#a1a6c5"
+        red "#f52a65"
+        green "#587539"
+        yellow "#8c6c3e"
+        blue "#2e7de9"
+        magenta "#9854f1"
+        cyan "#007197"
+        white "#3760bf"
+        orange "#b15c00"
+    }
+}

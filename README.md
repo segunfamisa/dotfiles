@@ -144,6 +144,7 @@ dot_config/homebrew/brewfile
 dot_config/ghostty/config
 dot_config/jj/config.toml.tmpl
 dot_config/jjui/config.toml
+dot_config/zellij/config.kdl
 dot_config/television/cable/files.toml
 ```
 
