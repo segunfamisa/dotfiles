@@ -31,6 +31,7 @@ bookmark-advance-to = "closest_pushable(@)"
 
 [revset-aliases]
 # More aliases are in https://www.lysator.liu.se/~axl/jj-aliases/
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
 "wip()" = 'description(glob:"wip:*")'
 "private()" = 'description(glob:"private:*")'
@@ -42,7 +43,7 @@ bookmark-advance-to = "closest_pushable(@)"
 [aliases]
 restack = ["rebase", "-o", "trunk()", "-s", "mutable_roots()"]
 slice = ["log", "-r", "slice()"]
-tug = ["bookmark", "advance"]
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
 
 [colors]
 # Use background highlighting for changed words instead of underlines.
