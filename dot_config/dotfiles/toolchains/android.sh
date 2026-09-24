@@ -8,6 +8,10 @@ if [ -d "$ANDROID_HOME/platform-tools" ]; then
   export PATH="$ANDROID_HOME/platform-tools:$PATH"
 fi
 
+if [ -d "$ANDROID_HOME/cmdline-tools/latest" ]; then
+  export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+fi
+
 ANDROID_NDK_HOME="$HOME/Library/Android/ndk"
 if [ -d "$ANDROID_NDK_HOME/simpleperf" ]; then
   export PATH="$ANDROID_NDK_HOME/simpleperf:$PATH"
