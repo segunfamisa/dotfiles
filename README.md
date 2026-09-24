@@ -35,7 +35,7 @@ email = "you@example.com"
 
 For example, personal and work machines can use different local values without committing them to this repo.
 
-During `chezmoi apply`, chezmoi also runs the managed Android tooling install script. Homebrew package installation is optional and can be run manually.
+During `chezmoi apply`, chezmoi also runs the managed Android tooling install script. Homebrew package installation is optional and can be run manually. The Brewfile includes the Flutter SDK and CocoaPods for Flutter's Apple-platform plugins.
 
 After the first install, update with:
 
@@ -70,6 +70,26 @@ bash ~/.config/dotfiles/toolchains/android-install.sh
 ```
 
 That installs the Android CLI and Perfetto tools.
+
+## Flutter
+
+Install the optional Homebrew packages to set up Flutter, Dart, and CocoaPods:
+
+```sh
+bash ~/.config/dotfiles/homebrew-install.sh
+```
+
+The shell configuration adds Homebrew's Flutter SDK at
+`$HOMEBREW_PREFIX/share/flutter/bin` to `PATH` (normally
+`/opt/homebrew/share/flutter/bin` on Apple Silicon). For a manually unpacked
+SDK, place it at `~/development/flutter`; its `bin` directory is used when
+Homebrew's Flutter is unavailable.
+
+After applying the dotfiles and installing the SDK, validate the platform setup:
+
+```sh
+flutter doctor -v
+```
 
 Homebrew package installation is intentionally manual/optional so different machines can choose whether to install the full Brewfile.
 
@@ -126,6 +146,7 @@ Toolchain-specific setup lives in:
 
 ```text
 dot_config/dotfiles/toolchains/android.sh
+dot_config/dotfiles/toolchains/flutter.sh
 dot_config/dotfiles/toolchains/java.sh
 dot_config/dotfiles/toolchains/node.sh
 dot_config/dotfiles/toolchains/python.sh

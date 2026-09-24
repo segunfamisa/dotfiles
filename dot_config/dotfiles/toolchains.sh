@@ -16,6 +16,7 @@ __dotfiles_toolchains_source_if_exists "$_dotfiles_toolchains_dir/ruby.sh"
 __dotfiles_toolchains_source_if_exists "$_dotfiles_toolchains_dir/rust.sh"
 __dotfiles_toolchains_source_if_exists "$_dotfiles_toolchains_dir/node.sh"
 __dotfiles_toolchains_source_if_exists "$_dotfiles_toolchains_dir/android.sh"
+__dotfiles_toolchains_source_if_exists "$_dotfiles_toolchains_dir/flutter.sh"
 
 unset _dotfiles_toolchains_config_dir _dotfiles_toolchains_dir __dotfiles_toolchains_file
 unset -f __dotfiles_toolchains_source_if_exists 2>/dev/null || unfunction __dotfiles_toolchains_source_if_exists 2>/dev/null
