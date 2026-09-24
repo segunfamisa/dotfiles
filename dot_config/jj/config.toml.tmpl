@@ -41,8 +41,10 @@ bookmark-advance-to = "closest_pushable(@)"
 "slice(from)" = 'ancestors(reachable(from, mutable()), 2)'
 
 [aliases]
+rebase-all = ["rebase", "-s", "(::trunk())+ & mutable()", "-o", "trunk()"]
 restack = ["rebase", "-o", "trunk()", "-s", "mutable_roots()"]
 slice = ["log", "-r", "slice()"]
+sync = ['git', 'fetch', '--all-remotes']
 tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
 
 [colors]
