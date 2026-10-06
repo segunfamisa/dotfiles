@@ -2,6 +2,8 @@
 
 _mozilla_config_dir="${DOTFILES_CONFIG_DIR:-$HOME/.config/dotfiles}/mozilla"
 
+export UV_PYTHON_INSTALL_DIR="$HOME/mozilla-source/.python"
+
 if [ -f "$_mozilla_config_dir/worktree.sh" ]; then
   . "$_mozilla_config_dir/worktree.sh"
 fi
