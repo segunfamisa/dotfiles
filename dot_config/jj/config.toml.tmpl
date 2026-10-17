@@ -41,7 +41,14 @@ bookmark-advance-to = "closest_pushable(@)"
 "slice(from)" = 'ancestors(reachable(from, mutable()), 2)'
 
 [aliases]
-rebase-all = ["rebase", "-s", "(::trunk())+ & mutable()", "-o", "trunk()"]
+# Rebase mutable descendants of the selected base. With no argument, keep the
+# usual trunk() behavior; otherwise pass a bookmark/revset such as autoland@origin.
+rebase-all = ["util", "exec", "--", "bash", "-c", '''
+set -euo pipefail
+target="${1:-trunk()}"
+shift || true
+exec jj rebase -s "(::${target})+ & mutable()" -o "$target" "$@"
+''', ""]
 restack = ["rebase", "-o", "trunk()", "-s", "mutable_roots()"]
 slice = ["log", "-r", "slice()"]
 sync = ['git', 'fetch', '--all-remotes']
