@@ -5,6 +5,12 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
 
+# Let tmux and terminal applications receive Ctrl+S instead of treating it as
+# the legacy XOFF flow-control character.
+if [[ -o interactive ]]; then
+  stty -ixon
+fi
+
 if [ -f "$ZSH/oh-my-zsh.sh" ]; then
   . "$ZSH/oh-my-zsh.sh"
 fi
