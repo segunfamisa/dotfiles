@@ -18,6 +18,12 @@ conflict-marker-style = "git"
 # Requires Android Studio's command-line launcher to be available as `studio`.
 merge-editor = "android-studio"
 
+[fsmonitor]
+backend = "watchman"
+
+[fsmonitor.watchman]
+register-snapshot-trigger = true
+
 [snapshot]
 # Refresh stale working-copy state automatically when files were changed by tools/IDEs.
 auto-update-stale = true
