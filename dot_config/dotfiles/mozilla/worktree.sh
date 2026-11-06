@@ -3,7 +3,7 @@ unalias fgit 2>/dev/null
 
 fgit() {
   local COMMAND="$1"
-  local BASE_DIR="$HOME/mozilla-source/firefox"
+  local BASE_DIR="$MOZILLA_SOURCE_DIR/firefox"
   local HUB_DIR="$BASE_DIR/bare"
   local WT_DIR="$BASE_DIR/worktrees"
 

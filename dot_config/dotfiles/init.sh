@@ -13,9 +13,7 @@ __dotfiles_source_if_exists() {
 __dotfiles_source_if_exists "$_dotfiles_config_dir/homebrew.sh"
 __dotfiles_source_if_exists "$_dotfiles_config_dir/secrets.sh"
 __dotfiles_source_if_exists "$_dotfiles_config_dir/toolchains.sh"
-if [ -d "$HOME/mozilla-source" ]; then
-  __dotfiles_source_if_exists "$_dotfiles_config_dir/mozilla.sh"
-fi
+__dotfiles_source_if_exists "$_dotfiles_config_dir/mozilla.sh"
 __dotfiles_source_if_exists "$_dotfiles_config_dir/tools.sh"
 __dotfiles_source_if_exists "$_dotfiles_config_dir/aliases.sh"
 __dotfiles_source_if_exists "$_dotfiles_config_dir/local.sh"
