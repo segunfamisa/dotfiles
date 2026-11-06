@@ -27,6 +27,7 @@ cask "temurin@21"
 # brews
 brew "bat"
 brew "cocoapods"
+brew "direnv"
 brew "fd"
 brew "fnm"
 brew "fzf"

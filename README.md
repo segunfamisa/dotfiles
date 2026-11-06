@@ -199,6 +199,21 @@ Or run `brew bundle` directly:
 brew bundle --file ~/.config/homebrew/brewfile
 ```
 
+## Python workspace environments
+
+The Brewfile installs `uv` and `direnv`. The shell configuration enables the
+`direnv` zsh hook, and `mozilla-source/firefox/.envrc` selects the nearest
+workspace `.venv` automatically. Create a workspace environment once with:
+
+```sh
+cd ~/mozilla-source/firefox/workspaces/new-workspace
+uv venv --python 3.12 .venv
+direnv allow ~/mozilla-source/firefox
+```
+
+After that, entering a workspace activates its own `.venv`; subdirectories
+reuse it. Workspaces without a `.venv` use no Python virtual environment.
+
 ## Local and private config
 
 Secrets and machine-specific values are intentionally kept outside this repository.
