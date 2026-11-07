@@ -21,6 +21,11 @@ if [ -d "$GYP_PATH" ]; then
   export PATH="$GYP_PATH:$PATH"
 fi
 
+MOZBUILD="$HOME/.mozbuild"
+if [ -d "$MOZBUILD" ]; then
+  export PATH="$MOZBUILD/env:$PATH"
+fi
+
 export NSS_DIR="$MOZILLA_SOURCE_DIR/application-services/libs/desktop/darwin-aarch64/nss"
 export NSS_STATIC=1
 {{- end }}
