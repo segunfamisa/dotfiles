@@ -47,6 +47,7 @@ bookmark-advance-to = "closest_pushable(@)"
 "slice(from)" = 'ancestors(reachable(from, mutable()), 2)'
 
 [aliases]
+plan = ["new", "--no-edit", "heads(@::)", "-m"]
 # Rebase mutable descendants of the selected base. With no argument, keep the
 # usual trunk() behavior; otherwise pass a bookmark/revset such as autoland@origin.
 rebase-all = ["util", "exec", "--", "bash", "-c", '''
